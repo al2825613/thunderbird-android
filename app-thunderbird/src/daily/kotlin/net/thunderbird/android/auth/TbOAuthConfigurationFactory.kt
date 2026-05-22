@@ -23,7 +23,7 @@ class TbOAuthConfigurationFactory : OAuthConfigurationFactory {
             "imap.aol.com",
             "smtp.aol.com",
         ) to OAuthConfiguration(
-            clientId = "dj0yJmk9Rk11R2pTTlF0TlZGJmQ9WVdrOVYxcElTMHBwWVZBbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWVm",
+            clientId = "YOUR_AOL_CLIENT_ID",
             scopes = listOf("mail-w"),
             authorizationEndpoint = "https://api.login.aol.com/oauth2/request_auth",
             tokenEndpoint = "https://api.login.aol.com/oauth2/get_token",
@@ -36,7 +36,7 @@ class TbOAuthConfigurationFactory : OAuthConfigurationFactory {
             "imap.fastmail.com",
             "smtp.fastmail.com",
         ) to OAuthConfiguration(
-            clientId = "353e41ae",
+            clientId = "YOUR_FASTMAIL_CLIENT_ID",
             scopes = listOf("https://www.fastmail.com/dev/protocol-imap", "https://www.fastmail.com/dev/protocol-smtp"),
             authorizationEndpoint = "https://api.fastmail.com/oauth/authorize",
             tokenEndpoint = "https://api.fastmail.com/oauth/refresh",
@@ -51,7 +51,7 @@ class TbOAuthConfigurationFactory : OAuthConfigurationFactory {
             "smtp.gmail.com",
             "smtp.googlemail.com",
         ) to OAuthConfiguration(
-            clientId = "560629489500-hbru1fssmec60eoa22b8k8l5tbmj0sc1.apps.googleusercontent.com",
+            clientId = "YOUR_GMAIL_CLIENT_ID",
             scopes = listOf("https://mail.google.com/"),
             authorizationEndpoint = "https://accounts.google.com/o/oauth2/v2/auth",
             tokenEndpoint = "https://oauth2.googleapis.com/token",
@@ -65,7 +65,7 @@ class TbOAuthConfigurationFactory : OAuthConfigurationFactory {
             "smtp.office365.com",
             "smtp-mail.outlook.com",
         ) to OAuthConfiguration(
-            clientId = "e6f8716e-299d-4ed9-bbf3-453f192f44e5",
+            clientId = "YOUR_MICROSOFT_CLIENT_ID",
             scopes = listOf(
                 "profile",
                 "openid",
@@ -76,7 +76,7 @@ class TbOAuthConfigurationFactory : OAuthConfigurationFactory {
             ),
             authorizationEndpoint = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
             tokenEndpoint = "https://login.microsoftonline.com/common/oauth2/v2.0/token",
-            redirectUri = "msauth://net.thunderbird.android.daily/KUkL9b7kcXs%2FtgmDCGD54ka8Bow%3D",
+            redirectUri = "YOUR_MICROSOFT_REDIRECT_URI",
         )
     }
 
@@ -85,7 +85,7 @@ class TbOAuthConfigurationFactory : OAuthConfigurationFactory {
             "imap.mail.yahoo.com",
             "smtp.mail.yahoo.com",
         ) to OAuthConfiguration(
-            clientId = "dj0yJmk9TTQ2U1JNTlBPQXdJJmQ9WVdrOWVIaHdkMFU0V0hZbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTBi",
+            clientId = "YOUR_YAHOO_CLIENT_ID",
             scopes = listOf("mail-w"),
             authorizationEndpoint = "https://api.login.yahoo.com/oauth2/request_auth",
             tokenEndpoint = "https://api.login.yahoo.com/oauth2/get_token",
@@ -98,7 +98,7 @@ class TbOAuthConfigurationFactory : OAuthConfigurationFactory {
             "mail.tb.pro",
             "mail.thundermail.com",
         ) to OAuthConfiguration(
-            clientId = "mobile-android-thunderbird",
+            clientId = "YOUR_THUNDERMAIL_CLIENT_ID",
             scopes = listOf("openid", "profile", "email", "offline_access"),
             authorizationEndpoint = "https://auth.tb.pro/realms/tbpro/protocol/openid-connect/auth",
             tokenEndpoint = "https://auth.tb.pro/realms/tbpro/protocol/openid-connect/token",
@@ -109,7 +109,7 @@ class TbOAuthConfigurationFactory : OAuthConfigurationFactory {
         listOf(
             "mail.stage-thundermail.com",
         ) to OAuthConfiguration(
-            clientId = "mobile-android-thunderbird",
+            clientId = "YOUR_THUNDERMAIL_STAGE_CLIENT_ID",
             scopes = listOf("openid", "profile", "email", "offline_access"),
             authorizationEndpoint = "https://auth-stage.tb.pro/realms/tbpro/protocol/openid-connect/auth",
             tokenEndpoint = "https://auth-stage.tb.pro/realms/tbpro/protocol/openid-connect/token",

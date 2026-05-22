@@ -11,13 +11,13 @@ android {
     namespace = "net.thunderbird.android"
 
     defaultConfig {
-        applicationId = "net.thunderbird.android"
-        testApplicationId = "net.thunderbird.android.tests"
+        applicationId = "com.core.alpha.mail"
+        testApplicationId = "com.core.alpha.mail.tests"
 
         versionCode = 4
         versionName = "21.0"
 
-        buildConfigField("String", "CLIENT_INFO_APP_NAME", "\"Thunderbird for Android\"")
+        buildConfigField("String", "CLIENT_INFO_APP_NAME", "\"Alpha Mail\"")
     }
 
     androidResources {
@@ -80,17 +80,17 @@ android {
     }
 
     signingConfigs {
-        val useUploadKey = properties.getOrDefault("tb.useUploadKey", "true") == "true"
-
-        createSigningConfig(project, SigningType.TB_RELEASE, isUpload = useUploadKey)
-        createSigningConfig(project, SigningType.TB_BETA, isUpload = useUploadKey)
-        createSigningConfig(project, SigningType.TB_DAILY, isUpload = useUploadKey)
+        // Custom signing configuration for Alpha Mail
+        // You can define your own signing config here or let Android Studio handle it
+        getByName("debug") {
+            // Default debug config
+        }
     }
 
     buildTypes {
         val isCI = project.findProperty("ci") == "true"
         release {
-            signingConfig = signingConfigs.getByType(SigningType.TB_RELEASE)
+            // signingConfig = signingConfigs.getByType(SigningType.TB_RELEASE)
 
             isMinifyEnabled = !isCI
             isShrinkResources = !isCI
@@ -107,7 +107,7 @@ android {
         create("beta") {
             initWith(getByName("release"))
 
-            signingConfig = signingConfigs.getByType(SigningType.TB_BETA)
+            // signingConfig = signingConfigs.getByType(SigningType.TB_BETA)
 
             applicationIdSuffix = ".beta"
             versionNameSuffix = "b0"
@@ -129,7 +129,7 @@ android {
         create("daily") {
             initWith(getByName("release"))
 
-            signingConfig = signingConfigs.getByType(SigningType.TB_DAILY)
+            // signingConfig = signingConfigs.getByType(SigningType.TB_DAILY)
 
             applicationIdSuffix = ".daily"
             versionNameSuffix = "a1"
